@@ -1,5 +1,37 @@
-# Project 9 - Front-end Dashboard
+# Project 12 - Front-end Dashboard
 
+## About project :
+
+SportSee is a startup dedicated to sports coaching. In full growth, the company will today launch a new version of the user profile page. This page will in particular allow the user to follow the number of sessions carried out as well as the number of calories burned.
+
+SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l’entreprise va aujourd’hui lancer une nouvelle version de la page profil de l’utilisateur. Cette page va notamment permettre à l’utilisateur de suivre le nombre de sessions réalisées ainsi que le nombre de calories brûlées.
+
+## Front-end Tech stack : 
+  "devDependencies": {
+    "@types/node": "^20.1.7",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "parcel-bundler": "^1.12.5",
+    "parceljs": "^0.0.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.1",
+    "styled-components": "^6.0.0-rc.1",
+    "typescript": "^5.0.4"
+  },
+
+## Scripts : 
+  "scripts": {
+    "dev": "node_modules/.bin/nodemon app/index.js",
+    "start": "node app/index.js",
+    "devfront": "parcel src/public/index.html",
+    "buildfront": "parcel build src/public/index.html"
+  }
+
+
+# Initial README content (back-end informations)
 This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
 
 ## 1. General information
