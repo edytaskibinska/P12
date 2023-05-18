@@ -6,36 +6,40 @@ SportSee is a startup dedicated to sports coaching. In full growth, the company 
 
 SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l’entreprise va aujourd’hui lancer une nouvelle version de la page profil de l’utilisateur. Cette page va notamment permettre à l’utilisateur de suivre le nombre de sessions réalisées ainsi que le nombre de calories brûlées.
 
-## Front-end Tech stack : 
-  "devDependencies": {
-    "@types/node": "^20.1.7",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
-    "parcel-bundler": "^1.12.5",
-    "parceljs": "^0.0.1"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.1",
-    "styled-components": "^6.0.0-rc.1",
-    "typescript": "^5.0.4"
-  },
+## Front-end Tech stack :
 
-## Scripts : 
-  "scripts": {
-    "dev": "node_modules/.bin/nodemon app/index.js",
-    "start": "node app/index.js",
-    "devfront": "parcel src/public/index.html",
-    "buildfront": "parcel build src/public/index.html"
-  }
-  
+- "devDependencies": {
+- "@types/node": "^20.1.7",
+- "@types/react": "^18.2.6",
+- "@types/react-dom": "^18.2.4",
+- "parcel-bundler": "^1.12.5",
+- "parceljs": "^0.0.1"
+- },
+
+- "dependencies": {
+-     "react": "^18.2.0",
+-     "react-dom": "^18.2.0",
+- "react-router-dom": "^6.11.1",
+-     "styled-components": "^6.0.0-rc.1",
+-     "typescript": "^5.0.4"
+- },
+
+## Scripts :
+
+- "scripts": {
+- "dev": "node_modules/.bin/nodemon app/index.js",
+- "start": "node app/index.js",
+- "devfront": "parcel src/public/index.html",
+-  "buildfront": "parcel build src/public/index.html"
+- }
+
 ## Run TSC compilation
 
-command : tsc
-with watch :  tsc -w
+- command : tsc
+- with watch : tsc -w
 
 # Initial README content (back-end informations)
+
 This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
 
 ## 1. General information
@@ -57,7 +61,6 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 - Clone it on your computer.
 - The `yarn` command will allow you to install the dependencies.
 - The `yarn dev` command will allow you to run the micro API.
-
 
 ## 3. Project (**with Docker**)
 
@@ -84,13 +87,12 @@ Once in the container, run the `yarn dev` command.
 
 ### 4.1 Possible endpoints
 
-This project includes four endpoints that you will be able to use: 
+This project includes four endpoints that you will be able to use:
 
 - `http://localhost:3000/user/${userId}` - retrieves information from a user. This first endpoint includes the user id, user information (first name, last name and age), the current day's score (todayScore) and key data (calorie, macronutrient, etc.).
 - `http://localhost:3000/user/${userId}/activity` - retrieves a user's activity day by day with kilograms and calories.
 - `http://localhost:3000/user/${userId}/average-sessions` - retrieves the average sessions of a user per day. The week starts on Monday.
 - `http://localhost:3000/user/${userId}/performance` - retrieves a user's performance (energy, endurance, etc.).
-
 
 **Warning, currently only two users have been mocked. They have userId 12 and 18 respectively.**
 
