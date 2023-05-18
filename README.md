@@ -29,7 +29,11 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
     "devfront": "parcel src/public/index.html",
     "buildfront": "parcel build src/public/index.html"
   }
+  
+## Run TSC compilation
 
+command : tsc
+with watch :  tsc -w
 
 # Initial README content (back-end informations)
 This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
