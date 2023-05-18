@@ -9,6 +9,7 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
 ## Front-end Tech stack :
 
 - "devDependencies": {
+  "parcel": "^2.8.3"
 - },
 
 - "dependencies": {
@@ -24,14 +25,13 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
 - "dev": "node_modules/.bin/nodemon app/index.js",
 - "start": "node app/index.js",
 - "devfront": "parcel src/public/index.html",
--  "buildfront": "parcel build src/public/index.html"
+- "buildfront": "parcel build src/public/index.html"
 - }
 
-
 ## Run app on :
+
 - backend port : 3003
 - frontend port : 3000
-
 
 ## Run TSC compilation
 

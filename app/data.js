@@ -6,7 +6,7 @@ const USER_MAIN_DATA = [
       lastName: "Dovineau",
       age: 31,
     },
-    todayScore: 0.12,
+    todayScore: 0.12,//si pas todayScore il faut utiliser score
     keyData: {
       calorieCount: 1930,
       proteinCount: 155,
@@ -17,7 +17,7 @@ const USER_MAIN_DATA = [
   {
     id: 18,
     userInfos: {
-      firstName: "Cecilia",
+      firstName: "Cecilia",//faire des routes de karl et cecile, pour la soutenance il faut pas modifier les donnees manuelement
       lastName: "Ratorez",
       age: 34,
     },
