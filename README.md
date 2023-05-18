@@ -17,11 +17,11 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
 - },
 
 - "dependencies": {
--     "react": "^18.2.0",
--     "react-dom": "^18.2.0",
+- "react": "^18.2.0",
+- "react-dom": "^18.2.0",
 - "react-router-dom": "^6.11.1",
--     "styled-components": "^6.0.0-rc.1",
--     "typescript": "^5.0.4"
+- "styled-components": "^6.0.0-rc.1",
+- "typescript": "^5.0.4"
 - },
 
 ## Scripts :
