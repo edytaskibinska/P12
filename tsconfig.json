@@ -1,0 +1,21 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    /* Modules */
+    "module": "commonjs",
+    "noEmitOnError": true /* ca ,e va pas compiler le fichier javascropt si on a erreur */,
+    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+    "strict": true /* Enable all strict type-checking options. */,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "jsx": "react",
+    // "outDir": "./out",
+    // "rootDir": "./src",
+    "lib": ["es2018", "dom"]
+  },
+  "include": ["./file.ts"],
+  "exclude": []
+}
