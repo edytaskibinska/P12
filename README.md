@@ -9,11 +9,6 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
 ## Front-end Tech stack :
 
 - "devDependencies": {
-- "@types/node": "^20.1.7",
-- "@types/react": "^18.2.6",
-- "@types/react-dom": "^18.2.4",
-- "parcel-bundler": "^1.12.5",
-- "parceljs": "^0.0.1"
 - },
 
 - "dependencies": {
@@ -21,7 +16,6 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
 - "react-dom": "^18.2.0",
 - "react-router-dom": "^6.11.1",
 - "styled-components": "^6.0.0-rc.1",
-- "typescript": "^5.0.4"
 - },
 
 ## Scripts :

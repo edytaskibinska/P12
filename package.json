@@ -7,12 +7,7 @@
   "author": "tdimnet <thomas.dimnet@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.1.7",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
-    "nodemon": "^2.0.4",
-    "parcel-bundler": "^1.12.5",
-    "parceljs": "^0.0.1"
+    "nodemon": "^2.0.4"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -21,8 +16,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
-    "styled-components": "^6.0.0-rc.1",
-    "typescript": "^5.0.4"
+    "styled-components": "^6.0.0-rc.1"
   },
   "scripts": {
     "dev": "node_modules/.bin/nodemon app/index.js",
