@@ -33,6 +33,12 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
 -  "buildfront": "parcel build src/public/index.html"
 - }
 
+
+## Run app on :
+- backend port : 3003
+- frontend port : 3000
+
+
 ## Run TSC compilation
 
 - command : tsc
