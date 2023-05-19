@@ -1,11 +1,15 @@
-import "./Content.scss"
+import styled from "styled-components";
+
+const ContentStyled = styled.div`
+  padding: 20px 30px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+`;
 
 function Content({ children }) {
-  return (
-    <div className="content">
-      {children}
-    </div>
-  );
+  return <ContentStyled className="content">{children}</ContentStyled>;
 }
 
 export default Content;

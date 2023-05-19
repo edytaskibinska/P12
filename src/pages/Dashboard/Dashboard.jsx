@@ -1,4 +1,4 @@
-import { GreyBlock, Loader } from "../../components";
+import { GreyBlock, Loader, Title } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 import { urlSettings } from "../../routes/settings";
 
@@ -10,6 +10,7 @@ function Dashboard() {
   return (
     <article className="dashboard">
       <GreyBlock>Dashboard</GreyBlock>
+      <Title>Dashboard</Title>
       {!currentData.isLoaded && <Loader />}
     </article>
   );

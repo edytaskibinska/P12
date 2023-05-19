@@ -8,8 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.4",
-    "parcel": "^2.8.3",
-    "sass": "^1.62.1"
+    "parcel": "^2.8.3"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

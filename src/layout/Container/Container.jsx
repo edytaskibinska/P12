@@ -1,11 +1,12 @@
-import "./Container.scss"
+import styled from "styled-components";
+
+const ContainerStyled = styled.div`
+  box-sizing: border-box;
+  display: flex;
+`;
 
 function Container({ children }) {
-  return (
-    <div className="container">
-      {children}
-    </div>
-  );
+  return <ContainerStyled className="container">{children}</ContainerStyled>;
 }
 
 export default Container;
