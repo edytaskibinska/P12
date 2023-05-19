@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 
-ADD . /app/
-WORKDIR /app
+ADD . /backend/
+WORKDIR /backend
 
 RUN yarn
 

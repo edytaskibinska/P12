@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&family=Roboto:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Roboto";
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout .container {
+  flex-grow: 1;
+}

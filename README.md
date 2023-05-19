@@ -100,3 +100,10 @@ This project includes four endpoints that you will be able to use:
 
 - `http://localhost:3000/user/12/performance` - Retrieves the performance of the user with id 12
 - `http://localhost:3000/user/18` - Retrieves user 18's main information.
+
+
+<!-- //TODO note : if use parcel:
+  "scripts": {
+    "devfront": "parcel public/index.html",
+    "buildfront": "parcel build public/index.html",
+  } -->
