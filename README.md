@@ -23,9 +23,7 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
 
 - "scripts": {
 - "dev": "node_modules/.bin/nodemon app/index.js",
-- "start": "node app/index.js",
-- "devfront": "parcel src/public/index.html",
-- "buildfront": "parcel build src/public/index.html"
+- "start": "node app/index.js"
 - }
 
 ## Run app on :
@@ -33,10 +31,12 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
 - backend port : 3003
 - frontend port : 3000
 
-## Run TSC compilation
+## Run Project
 
-- command : tsc
-- with watch : tsc -w
+- Front-end command  :  npm run start
+- Back-end command  : npm run start-backend
+
+NOTE: I dopn't use Yarn anymore, it's a fun package manager but to avoid errors and have the application stable I use npm CLI. 
 
 # Initial README content (back-end informations)
 
@@ -103,7 +103,11 @@ This project includes four endpoints that you will be able to use:
 
 
 <!-- //TODO note : if use parcel:
-  "scripts": {
-    "devfront": "parcel public/index.html",
-    "buildfront": "parcel build public/index.html",
-  } -->
+  ## Scripts :
+
+- "scripts": {
+- "dev": "node_modules/.bin/nodemon app/index.js",
+- "start": "node app/index.js",
+- "devfront": "parcel src/public/index.html",
+- "buildfront": "parcel build src/public/index.html"
+- } -->
