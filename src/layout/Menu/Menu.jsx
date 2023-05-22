@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+import styleSettings from "../../globalStyles/styleSettings";
+
 const MenuStyled = styled.ul`
   display: flex;
   .navLink {
@@ -8,7 +10,7 @@ const MenuStyled = styled.ul`
     padding: 20px;
     font-size: 24px;
     text-decoration: none;
-    font-family: "Roboto";
+    font-family: ${styleSettings.fontFamily.regular}, sans-serif;
     &.active {
       text-decoration: underline;
     }
