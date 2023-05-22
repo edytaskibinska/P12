@@ -30,9 +30,11 @@ function useFetch(url) {
     }
 
     fetchData();
-  }, [url, data]);
+  }, [url]);
 
   return { data, isLoaded, errorMessage };
 }
 
 export default useFetch;
+
+//TODO correction on line  }, [url, data]);

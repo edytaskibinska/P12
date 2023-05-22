@@ -1,12 +1,20 @@
 import { GreyBlock, Loader, Title } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
-import { urlSettings } from "../../routes/settings";
+import { urlSettings, userIdTemp, ressources } from "../../routes/settings";
 
 function Dashboard() {
-  const { server, port, dataUrl } = urlSettings;
-  const currentData = useFetch(`${server}:${port}/${dataUrl}`);
+  //TODO : gerer les userId, ressource dynamiquement
+  const { server, port, uriUser } = urlSettings;
+  const { userId } = userIdTemp;
+  const { session, activity, performance } = ressources;
+
+  
+  const currentData = useFetch(
+    `${server}:${port}/${uriUser}/${userId}/${session}`
+  );
   const { data } = currentData;
-  console.log("item", data);
+
+  console.log("data", data);
   return (
     <article className="dashboard">
       <GreyBlock>Dashboard</GreyBlock>
