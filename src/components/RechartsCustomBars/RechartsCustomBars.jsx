@@ -56,7 +56,7 @@ const dataRecharts = [
   },
 ];
 
-const RechartsCustomStyled = styled.div`
+const RechartsCustomBarsStyled = styled.div`
   border: 1px solid red;
 
   .recharts-bar-rectangle {
@@ -64,9 +64,9 @@ const RechartsCustomStyled = styled.div`
   }
 `;
 
-function RechartsCustom() {
+function RechartsCustomBars() {
   return (
-    <RechartsCustomStyled>
+    <RechartsCustomBarsStyled>
       <BarChart
         width={500}
         height={300}
@@ -86,8 +86,8 @@ function RechartsCustom() {
         <Bar dataKey="poids" fill="#282D30" radius={[3.5,3.5, 0, 0 ]} width="5"/>
         <Bar dataKey="calories" fill="#E60000" radius={[3.5,3.5, 0, 0 ]}/>
       </BarChart>
-    </RechartsCustomStyled>
+    </RechartsCustomBarsStyled>
   );
 }
 
-export default RechartsCustom;
+export default RechartsCustomBars;

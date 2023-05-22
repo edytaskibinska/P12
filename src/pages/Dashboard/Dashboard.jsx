@@ -1,4 +1,4 @@
-import { GreyBlock, Loader, Title, RechartsCustom } from "../../components";
+import { GreyBlock, Loader, Title, RechartsCustomBars } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 import { urlSettings, userIdTemp, ressources } from "../../routes/settings";
 
@@ -71,7 +71,7 @@ function Dashboard() {
     <article className="dashboard">
       <GreyBlock>
         
-        <RechartsCustom/>
+        <RechartsCustomBars/>
       </GreyBlock>
       <Title>Dashboard</Title>
       {!currentData.isLoaded && <Loader />}
