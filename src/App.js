@@ -3,7 +3,7 @@ import { createContext } from "react";
 import { router } from "./routes/browserRouter";
 // style
 import GlobalStyle from "./globalStyles/globalStyle";
-import NormalizeStyles from "./globalStyles/normalizeStyles";
+import NormalizeStyle from "./globalStyles/normalizeStyle";
 import { ThemeProvider } from "styled-components";
 
 export const AppDataContext = createContext([]);
@@ -11,7 +11,7 @@ export const AppDataContext = createContext([]);
 function App() {
   return (
     <ThemeProvider theme={{ mode: "dark" }}>
-      <NormalizeStyles />
+      <NormalizeStyle />
       <GlobalStyle />
       <RouterProvider className="App" router={router} />;
     </ThemeProvider>

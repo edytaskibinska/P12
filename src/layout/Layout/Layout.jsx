@@ -1,5 +1,4 @@
 import { Aside, Menu, Content, Container, Header } from "../";
-import "./Layout.scss";
 
 function Layout({ menu, content }) {
   return (

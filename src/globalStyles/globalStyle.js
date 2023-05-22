@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 //TODO  import colors from '../settings/colorsIndex'
-import styleSettings from "../settings/styleSettings";
+import styleSettings from "../globalStyles/styleSettings";
 
 const GlobalStyle = createGlobalStyle`
   
