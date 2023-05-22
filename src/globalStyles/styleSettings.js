@@ -1,7 +1,6 @@
 ﻿import Roboto from "../fonts/Roboto-Regular.ttf";
 import RobotoBold from "../fonts/Roboto-Bold.ttf";
 
-//TODO import colors from "./colorsIndex";
 
 const styleSettings = {
   fontFamily: {

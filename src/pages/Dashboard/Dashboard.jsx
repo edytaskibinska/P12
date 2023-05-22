@@ -1,6 +1,7 @@
-import { GreyBlock, Loader, Title, RechartsCustomBars } from "../../components";
+import { Block, Loader, Title, RechartsCustomBars } from "../../components";
 import useFetch from "../../hooks/useFetchAsync";
 import { urlSettings, userIdTemp, ressources } from "../../routes/settings";
+import colors from "../../globalStyles/colorsIndex";
 
 
 function Dashboard() {
@@ -69,10 +70,11 @@ function Dashboard() {
   console.log("data", data);
   return (
     <article className="dashboard">
-      <GreyBlock>
-        
+      <Block color={colors.bgClear}>
         <RechartsCustomBars/>
-      </GreyBlock>
+      </Block>
+      <Block color={colors.main}></Block>
+      <Block color={colors.graphitBg}></Block>
       <Title>Dashboard</Title>
       {!currentData.isLoaded && <Loader />}
     </article>

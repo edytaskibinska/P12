@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import colors from "../../globalStyles/colorsIndex";
+//import colorVariables from "../../globalStyles/vars/colorVariables";
 
 import {
   BarChart,
@@ -83,8 +85,8 @@ function RechartsCustomBars() {
         <YAxis orientation="right"/>
         {/* <Tooltip /> */}
         <Legend />
-        <Bar dataKey="poids" fill="#282D30" radius={[3.5,3.5, 0, 0 ]} width="5"/>
-        <Bar dataKey="calories" fill="#E60000" radius={[3.5,3.5, 0, 0 ]}/>
+        <Bar dataKey="poids" fill={colors.graphitBg} radius={[3.5,3.5, 0, 0 ]} width="5"/>
+        <Bar dataKey="calories" fill={colors.main} radius={[3.5,3.5, 0, 0 ]}/>
       </BarChart>
     </RechartsCustomBarsStyled>
   );

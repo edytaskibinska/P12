@@ -1,23 +1,28 @@
-import colorVariables from '../globalStyles/vars/colorVariables'
+import colorVariables from "./vars/colorVariables";
 
 const {
   transparent,
   white,
-  main,
-  black
- 
-} = colorVariables
+  black,
+  lightGrey,
+  red,
+  graphit,
+  blue,
+  yellow,
+  pink,
+} = colorVariables;
 
 const colors = {
-  leadingColor: getMainColor,
+  main: red,
   bgWhite: white,
+  bgClear: lightGrey,
   transparentColor: transparent,
-  darkBackground: black
-  
-}
+  graphitBg: graphit,
+  blackBg: black,
+  blueBg: blue,
+  yellowBg: yellow,
+  pinkBg: pink,
+};
 
-export default colors
 
-function getMainColor() {
-  return main
-}
+export default colors;
