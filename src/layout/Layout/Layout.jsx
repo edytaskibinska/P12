@@ -8,7 +8,7 @@ function Layout({ menu, content }) {
         <Menu menuArray={menu} />
       </Header>
       <Container>
-        <Aside/>
+        <Aside copyText="Copiryght, SportSee 2020"/>
         <Content>{content}</Content>
       </Container>
     </section>

@@ -1,6 +1,7 @@
 import {
   Block,
   IconBlock,
+  IndicatorText,
   Loader,
   Text,
   Title,
@@ -73,8 +74,15 @@ function Dashboard() {
   console.log("data", data);
   return (
     <article className="dashboard">
-      <Title welcomeMessage="Bonjour " margin="20px 0 0 0"  name="Thomas" nameColor={colors.main} />
-      <Text fontSize="18px" margin="20px 0 40px 0" >Félicitation ! Vous avez explosé vos objectifs hier 👏</Text>
+      <Title
+        welcomeMessage="Bonjour "
+        margin="20px 0 0 0"
+        name="Thomas"
+        nameColor={colors.main}
+      />
+      <Text fontSize="18px" margin="20px 0 40px 0">
+        Félicitation ! Vous avez explosé vos objectifs hier 👏
+      </Text>
       <Block grid3to1>
         <Block specialClass="echarts" padding="20px 10px">
           <Block color={colors.bgClear}>
@@ -102,49 +110,51 @@ function Dashboard() {
         </Block>
 
         <Block padding="20px 10px" specialClass="indicators">
-          <Block color={colors.bgClear} padding="20px" margin="0 0 20px 0">
-            <IconBlock
-              padding="5px"
-              margin="0 0 20px 0"
-              dimensions="60px"
-              color={colors.mainClear}
-            >
+          <Block
+            grid1to3
+            color={colors.bgClear}
+            padding="20px"
+            margin="0 0 20px 0"
+          >
+            <IconBlock padding="5px" dimensions="60px" color={colors.mainClear}>
               <EnergyIcon color={colors.main} />
             </IconBlock>
-            sds
+            <IndicatorText indicatorValue={`40g`} description={`lipides`} />
           </Block>
-          <Block color={colors.bgClear} padding="20px" margin="20px 0">
+          <Block grid1to3 color={colors.bgClear} padding="20px" margin="20px 0">
             <IconBlock
               padding="5px"
-              margin="0 0 20px 0"
               dimensions="60px"
               color={colors.blueBgClear}
             >
               <ChickenIcon color={colors.blueBg} />
             </IconBlock>
-            dsd
+            <IndicatorText indicatorValue={`40g`} description={`lipides`} />
           </Block>
-          <Block color={colors.bgClear} padding="20px" margin="20px 0">
+          <Block grid1to3 color={colors.bgClear} padding="20px" margin="20px 0">
             <IconBlock
               padding="5px"
-              margin="0 0 20px 0"
               dimensions="60px"
               color={colors.yellowBgClear}
             >
               <AppleIcon color={colors.yellowBg} />
             </IconBlock>
-            dsd
+            <IndicatorText indicatorValue={`40g`} description={`lipides`} />
           </Block>
-          <Block color={colors.bgClear} padding="20px" margin="20px 0 0 0 0">
+          <Block
+            grid1to3
+            color={colors.bgClear}
+            padding="20px"
+            margin="20px 0 0 0 0"
+          >
             <IconBlock
               padding="5px"
-              margin="0 0 20px 0"
               dimensions="60px"
               color={colors.pinkBgClear}
             >
               <BurgerIcon color={colors.pinkBg} />
             </IconBlock>
-            ds
+            <IndicatorText indicatorValue={`40g`} description={`lipides`} />
           </Block>
         </Block>
       </Block>

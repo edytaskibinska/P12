@@ -17,10 +17,10 @@ const TextStyled = styled.p.attrs((props) => ({
   margin: ${(props) => props.margin};
 `;
 
-function Text({ children, color, margin, fontSize, fontWeight }) {
+function Text({ children, color, margin, fontSize, fontWeight, className }) {
   return (
     <TextStyled
-      className="Text"
+      className={`Text ${className}`}
       color={color}
       margin={margin}
       fontSize={fontSize}
@@ -37,6 +37,7 @@ Text.propTypes = {
   margin: PropTypes.string,
   fontSize: PropTypes.string,
   fontWeight: PropTypes.string,
+  classNam: PropTypes.string,
 };
 
 export default Text;
