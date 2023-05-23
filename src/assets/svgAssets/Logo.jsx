@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function Logo({ color }) {
   return (
     <svg
@@ -70,5 +72,9 @@ function Logo({ color }) {
     </svg>
   );
 }
+
+Logo.propTypes = {
+  color: PropTypes.string,
+};
 
 export default Logo;

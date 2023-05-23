@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import PropTypes from 'prop-types';
+
 
 const TitleStyled = styled.div`
   color: #ff0002;
@@ -10,6 +12,10 @@ const TitleStyled = styled.div`
 
 function Title({ children }) {
   return <TitleStyled className="title">{children}</TitleStyled>;
+}
+
+Title.propTypes = {
+  children:PropTypes.node.isRequired,
 }
 
 export default Title;

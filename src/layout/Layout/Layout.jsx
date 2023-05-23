@@ -1,5 +1,6 @@
 import { Aside, Menu, Content, Container, Header } from "../";
 
+
 function Layout({ menu, content }) {
   return (
     <section className="layout">
@@ -7,7 +8,7 @@ function Layout({ menu, content }) {
         <Menu menuArray={menu} />
       </Header>
       <Container>
-        <Aside>Menu vertical</Aside>
+        <Aside/>
         <Content>{content}</Content>
       </Container>
     </section>

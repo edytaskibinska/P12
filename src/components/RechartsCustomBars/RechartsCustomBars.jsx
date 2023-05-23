@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from 'prop-types';
+
 import styled from "styled-components";
 import colors from "../../globalStyles/colorsIndex";
 //import colorVariables from "../../globalStyles/vars/colorVariables";
@@ -91,5 +93,11 @@ function RechartsCustomBars() {
     </RechartsCustomBarsStyled>
   );
 }
+
+
+RechartsCustomBars.propTypes = {
+  //TDOO delete if nou used children:PropTypes.node.isRequired,
+}
+
 
 export default RechartsCustomBars;

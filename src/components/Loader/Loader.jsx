@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const LoaderElementStyled = styled.div`
   box-sizing: border-box;
@@ -53,5 +54,8 @@ function Loader() {
     </LoaderStyled>
   );
 }
+Loader.propTypes = {
+  //TODO - delete if not used
+};
 
 export default Loader;
