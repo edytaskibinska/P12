@@ -25,6 +25,7 @@ function Dashboard() {
     `${server}:${port}/${uriUser}/${userId}/${session}`
   );
   const { data } = currentData;
+  console.log("data", data);
 
   const rechartData = [
     {
@@ -71,7 +72,7 @@ function Dashboard() {
     },
   ];
 
-  console.log("data", data);
+ 
   return (
     <article className="dashboard">
       <Title

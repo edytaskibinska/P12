@@ -21,16 +21,16 @@ const TitleHello = styled.span.attrs((props) => ({
 `;
 
 const TitleName = styled.span.attrs((props) => ({
-  nameColor: props.nameColor,
+  namecolor: props.namecolor,
 }))`
-  color: ${(props) => props.nameColor};
+  color: ${(props) => props.namecolor};
 `;
 
-function Title({ welcomeMessage, name, welcomeColor, nameColor, margin }) {
+function Title({ welcomeMessage, name, welcomeColor, namecolor, margin }) {
   return (
     <TitleStyled className="title" margin={margin}>
       <TitleHello welcomeColor={welcomeColor}>{welcomeMessage}</TitleHello>
-      <TitleName nameColor={nameColor}>{name}</TitleName>
+      <TitleName namecolor={namecolor}>{name}</TitleName>
     </TitleStyled>
   );
 }
@@ -39,7 +39,7 @@ Title.propTypes = {
   welcomeMessage: PropTypes.string.isRequired,
   name: PropTypes.string,
   welcomeColor: PropTypes.string,
-  nameColor: PropTypes.string,
+  namecolor: PropTypes.string,
   margin: PropTypes.string,
 };
 

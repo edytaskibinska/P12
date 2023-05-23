@@ -85,7 +85,7 @@ function RechartsCustomBars() {
         <CartesianGrid vertical strokeDasharray="1 1" verticalPoints={[1]} />
         <XAxis dataKey="name" />
         <YAxis orientation="right"/>
-        {/* <Tooltip /> */}
+        <Tooltip />
         <Legend />
         <Bar dataKey="poids" fill={colors.graphitBg} radius={[3.5,3.5, 0, 0 ]} width="5"/>
         <Bar dataKey="calories" fill={colors.main} radius={[3.5,3.5, 0, 0 ]}/>
