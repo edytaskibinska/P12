@@ -2,6 +2,7 @@ import {
   Block,
   IconBlock,
   Loader,
+  Text,
   Title,
   RechartsCustomBars,
 } from "../../components";
@@ -72,8 +73,8 @@ function Dashboard() {
   console.log("data", data);
   return (
     <article className="dashboard">
-      <Title>Dashboard</Title>
-
+      <Title welcomeMessage="Bonjour " margin="20px 0 0 0"  name="Thomas" nameColor={colors.main} />
+      <Text fontSize="18px" margin="20px 0 40px 0" >Félicitation ! Vous avez explosé vos objectifs hier 👏</Text>
       <Block grid3to1>
         <Block specialClass="echarts" padding="20px 10px">
           <Block color={colors.bgClear}>

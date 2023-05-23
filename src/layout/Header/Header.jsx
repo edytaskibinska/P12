@@ -1,4 +1,4 @@
-import { Logo } from "../../assets";
+import logo from "../../assets/images/logo.png";
 import styled from "styled-components";
 
 const HeaderStyled = styled.header`
@@ -16,7 +16,7 @@ function Header({ children }) {
   return (
     <HeaderStyled className="header">
       <a href="/">
-        <Logo color="rgb(255, 1, 1);" />
+       <img src={logo} alt="" className="logo" />
       </a>
       {children}
     </HeaderStyled>
