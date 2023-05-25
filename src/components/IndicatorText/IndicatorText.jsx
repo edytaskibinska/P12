@@ -24,7 +24,7 @@ function IndicatorText({
   descriptionColor,
   padding,
   margin,
-  indicatorValue,
+  indicatorvalue,
   description,
 }) {
   return (
@@ -34,11 +34,11 @@ function IndicatorText({
       descriptionColor={descriptionColor}
       padding={padding}
       margin={margin}
-      indicatorValue={indicatorValue}
+      indicatorvalue={indicatorvalue}
       description={description}
     >
       <Text className="indText" color={indicatorColor}>
-        {indicatorValue}
+        {indicatorvalue}
       </Text>
       <Text className="indDesc" color={descriptionColor}>
         {description}
@@ -52,7 +52,7 @@ IndicatorText.propTypes = {
   descriptionColor: PropTypes.string,
   padding: PropTypes.string,
   margin: PropTypes.string,
-  indicatorValue: PropTypes.string, //ou number ?? TODO verifier
+  indicatorvalue: PropTypes.string, //ou number ?? TODO verifier
   description: PropTypes.string,
 };
 

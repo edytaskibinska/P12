@@ -95,17 +95,17 @@ function Dashboard() {
                 color={colors.main}
                 margin="10px 10px 10px 0"
                 padding="20px"
-              ></Block>
+              ><></></Block>
               <Block
                 color={colors.graphitBg}
                 margin="10px "
                 padding="20px"
-              ></Block>
+              ><></></Block>
               <Block
                 color={colors.bgClear}
                 margin="10px 0 10px 10px "
                 padding="20px"
-              ></Block>
+              ><></></Block>
             </Block>
           </Block>
         </Block>
@@ -120,7 +120,7 @@ function Dashboard() {
             <IconBlock padding="5px" dimensions="60px" color={colors.mainClear}>
               <EnergyIcon color={colors.main} />
             </IconBlock>
-            <IndicatorText indicatorValue={`40g`} description={`lipides`} />
+            <IndicatorText indicatorvalue={`40g`} description={`lipides`} />
           </Block>
           <Block grid1to3 color={colors.bgClear} padding="20px" margin="20px 0">
             <IconBlock
@@ -130,7 +130,7 @@ function Dashboard() {
             >
               <ChickenIcon color={colors.blueBg} />
             </IconBlock>
-            <IndicatorText indicatorValue={`40g`} description={`lipides`} />
+            <IndicatorText indicatorvalue={`40g`} description={`lipides`} />
           </Block>
           <Block grid1to3 color={colors.bgClear} padding="20px" margin="20px 0">
             <IconBlock
@@ -140,7 +140,7 @@ function Dashboard() {
             >
               <AppleIcon color={colors.yellowBg} />
             </IconBlock>
-            <IndicatorText indicatorValue={`40g`} description={`lipides`} />
+            <IndicatorText indicatorvalue={`40g`} description={`lipides`} />
           </Block>
           <Block
             grid1to3
@@ -155,13 +155,13 @@ function Dashboard() {
             >
               <BurgerIcon color={colors.pinkBg} />
             </IconBlock>
-            <IndicatorText indicatorValue={`40g`} description={`lipides`} />
+            <IndicatorText indicatorvalue={`40g`} description={`lipides`} />
           </Block>
         </Block>
       </Block>
 
-      <Block color={colors.main}></Block>
-      <Block color={colors.graphitBg}></Block>
+      <Block color={colors.main}><></></Block>
+      <Block color={colors.graphitBg}><></></Block>
       {!currentData.isLoaded && <Loader />}
     </article>
   );

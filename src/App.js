@@ -6,6 +6,9 @@ import GlobalStyle from "./globalStyles/globalStyle";
 import NormalizeStyle from "./globalStyles/normalizeStyle";
 import { ThemeProvider } from "styled-components";
 
+//TODO temp 
+import "./models"
+//END temp supprimer apres 
 export const AppDataContext = createContext([]);
 
 function App() {
