@@ -1,6 +1,6 @@
 export const routerArray = [
   {
-    url: "/",
+    url: "/12",
     linkName: "Accueil",
   },{
     url: "profil",

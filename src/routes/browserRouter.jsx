@@ -16,8 +16,7 @@ const Root = () => {
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
-      <Route index element={<Dashboard />} />
-      {/* <Route path={`ficheLogement/:userId`} element={<FicheLogement />} /> */}
+      <Route index path="/:userId" element={<Dashboard />} />
       <Route path="accueil" element={<Page404 />} />
       <Route path="profil" element={<Page404 />} />
       <Route path="reglages" element={<Page404 />} />

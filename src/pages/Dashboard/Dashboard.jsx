@@ -11,21 +11,26 @@ import { EnergyIcon, ChickenIcon, AppleIcon, BurgerIcon } from "../../assets";
 import useFetch from "../../hooks/useFetchAsync";
 import { urlSettings, userIdTemp, ressources } from "../../routes/settings";
 import colors from "../../globalStyles/colorsIndex";
+//import UseFetchTempClass from "../../services/tempmock";
 
 function Dashboard() {
   //TODO : gerer les userId, ressource dynamiquement
   const { server, port, uriUser } = urlSettings;
   const { userId } = userIdTemp;
+  const urlBase = `${server}:${port}/${uriUser}/${userId}`;
   //userId :       /:user_id
   //On utilise  :user_id  pour matérialiser l’ID de l’utilisateur, c’est ce qu’on appelle un placeholder.
 
   const { session, activity, performance } = ressources;
 
-  const currentData = useFetch(
-    `${server}:${port}/${uriUser}/${userId}/${session}`
-  );
-  const { data } = currentData;
-  console.log("data", data);
+  const sessionsData = useFetch(`${urlBase}/${session}`);
+  const activityData = useFetch(`${urlBase}/${activity}`);
+  const performanceData = useFetch(`${urlBase}/${performance}`);
+
+  //const { data } = sessionsData;
+  const { data } = activityData;
+  //const { data } = performanceData;
+  console.log("DASHBOARD data", data);
 
   const rechartData = [
     {
@@ -72,7 +77,6 @@ function Dashboard() {
     },
   ];
 
- 
   return (
     <article className="dashboard">
       <Title
@@ -95,17 +99,19 @@ function Dashboard() {
                 color={colors.main}
                 margin="10px 10px 10px 0"
                 padding="20px"
-              ><></></Block>
-              <Block
-                color={colors.graphitBg}
-                margin="10px "
-                padding="20px"
-              ><></></Block>
+              >
+                <></>
+              </Block>
+              <Block color={colors.graphitBg} margin="10px " padding="20px">
+                <></>
+              </Block>
               <Block
                 color={colors.bgClear}
                 margin="10px 0 10px 10px "
                 padding="20px"
-              ><></></Block>
+              >
+                <></>
+              </Block>
             </Block>
           </Block>
         </Block>
@@ -160,9 +166,13 @@ function Dashboard() {
         </Block>
       </Block>
 
-      <Block color={colors.main}><></></Block>
-      <Block color={colors.graphitBg}><></></Block>
-      {!currentData.isLoaded && <Loader />}
+      <Block color={colors.main}>
+        <></>
+      </Block>
+      <Block color={colors.graphitBg}>
+        <></>
+      </Block>
+      {!sessionsData.isLoaded && <Loader />}
     </article>
   );
 }
