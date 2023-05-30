@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { GetUserActivity } from "../../services/GetData";
+import { GetUserActivity, GetUserById } from "../../services/GetData";
 import { Loader } from "../../components";
 import { useParams } from "react-router-dom";
 
@@ -19,69 +19,106 @@ import {
 const RechartsCustomRadialStyled = styled.div`
   border: 1px solid red;
   width: 100%;
-  height: 100px;
+  height: 160px;
+  .recharts-legend-item-text {
+    color: ${colors.blackBg}!important;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
 `;
 
 const fakeData = [
-
   {
     name: "",
-    uv: 88,
+    score: 50,
     pv: 4800,
-   fill: colors.bgClear,
+    fill: colors.bgClear,
   },
   {
-    name: "unknow",
-    uv: 12,
+    name: "Score",
+    score: 50,
     pv: 4800,
-    fill: "#ffc658",
+    fill: colors.main,
   },
 ];
 
-const style = {
-  top: "50%",
-  right: 0,
+const scoreTextStyle = {
+  top: "-20%",
+  left: 0,
   transform: "translate(0, -50%)",
+  color: colors.blackBg,
   lineHeight: "24px",
 };
 
 function RechartsCustomRadial() {
   let { userId } = useParams();
   const [data, setData] = useState(null);
-
+  const dataExist = (data || data?.id) != null;
+  //TODO ajuster
+  let scoreToPercentage = 0;
+  data?.todayScore
+    ? (scoreToPercentage += data?.todayScore * 100)
+    : (scoreToPercentage += data?.score * 100);
+  let angle = 360 / (100 / scoreToPercentage) + 90;
+  const value = [{ value: scoreToPercentage, fill: "#ff0000" }];
+  //todo end
   return (
     <>
       {/* <GetUserActivity setData={setData} userId={Number(userId)} />
       {console.log("GetUserActivity /activity", data)} */}
+      {console.log("dataExist", dataExist)}
+      <GetUserById setData={setData} userId={Number(userId)} />
+      {console.log("data", data)}
+
       <RechartsCustomRadialStyled>
         {/* {fakeData ? ( TODO condition ? : Loader */}
+        {dataExist ? (
           <>
             <ResponsiveContainer width="100%" height="100%">
               <RadialBarChart
                 cx="50%"
                 cy="50%"
-                innerRadius="10%"
-                outerRadius="80%"
-                barSize={10}
+                //TODO take data from getData and model like fakeData
                 data={fakeData}
+                innerRadius={300}
+                outerRadius={60}
+                barSize={8}
+                //data={value}
+                startAngle={90}
+                endAngle={angle}
               >
-                <RadialBar
+                <RadialBar dataKey="score" cornerRadius={10} />
+                <circle cx="50%" cy="50%" fill="white" r="55px"></circle>
+                <Legend
+                  iconSize={0}
+                  layout="horizontal"
+                  verticalAlign="middle"
+                  align="center"
+                  payload={value}
+                  content={"SCORE"}
+                />
+
+                {/* <RadialBar
                   minAngle={15}
-                  label={{ position: "insideStart", fill: "#fff" }}
+                  label={{ position: "insideStart", fill: colors?.bgWhite }}
                   background
                   clockWise
-                  dataKey="uv"
+                  dataKey="score"
                 />
-                {/* <Legend
-                  iconSize={10}
+                <Legend
+                  iconSize={0}
                   layout="vertical"
                   verticalAlign="middle"
-                  wrapperStyle={style}
+                  wrapperStyle={scoreTextStyle}
                 /> */}
               </RadialBarChart>
             </ResponsiveContainer>
           </>
-  
+        ) : (
+          <Loader />
+        )}
       </RechartsCustomRadialStyled>
     </>
   );
