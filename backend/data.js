@@ -17,7 +17,7 @@ const USER_MAIN_DATA = [
   {
     id: 18,
     userInfos: {
-      firstName: "Cecilia",//faire des routes de karl et cecile, pour la soutenance il faut pas modifier les donnees manuelement
+      firstName: "Cecilia",
       lastName: "Ratorez",
       age: 34,
     },

@@ -15,9 +15,9 @@ const MenuStyled = styled.ul`
       text-decoration: underline;
     }
   }
-  @media all and (max-width: 1040px) {
+  @media all and (max-width: 1024px) {
     .navLink {
-      font-size: 18px;
+      font-size: 24px;
     }
   }
   @media all and (max-width: 750px) {

@@ -4,9 +4,6 @@ export const urlSettings = {
   uriUser: "user"
 };
 
-export const userIdTemp = {
-  userId:"12"
-}
 
 export const ressources = {
   session:"average-sessions",

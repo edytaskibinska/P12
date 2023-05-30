@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import styleSettings from "../../globalStyles/styleSettings";
+import colors from "../../globalStyles/colorsIndex";
 
 const TitleStyled = styled.h1.attrs((props) => ({
   margin: props.margin,
@@ -23,8 +24,15 @@ const TitleHello = styled.span.attrs((props) => ({
 const TitleName = styled.span.attrs((props) => ({
   namecolor: props.namecolor,
 }))`
-  color: ${(props) => props.namecolor};
+  color: ${colors?.main};
 `;
+
+// const TitleName = styled.span.attrs((props) => ({
+//   namecolor: props.namecolor,
+// }))`
+//   color: ${(props) => props.namecolor};
+// `; TODO : trouver une solution avec props 
+
 
 function Title({ welcomeMessage, name, welcomeColor, namecolor, margin }) {
   return (
@@ -37,7 +45,7 @@ function Title({ welcomeMessage, name, welcomeColor, namecolor, margin }) {
 
 Title.propTypes = {
   welcomeMessage: PropTypes.string.isRequired,
-  name: PropTypes.string,
+  name: PropTypes.any,//TODO corriger
   welcomeColor: PropTypes.string,
   namecolor: PropTypes.string,
   margin: PropTypes.string,

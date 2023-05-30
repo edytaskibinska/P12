@@ -32,7 +32,7 @@ function Text({ children, color, margin, fontSize, fontWeight, className }) {
 }
 
 Text.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   color: PropTypes.string,
   margin: PropTypes.string,
   fontSize: PropTypes.string,
