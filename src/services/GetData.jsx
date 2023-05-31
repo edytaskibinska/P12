@@ -133,3 +133,25 @@ export const GetUserAverageSessions = ({ setData, userId }) => {
 
   return null;
 };
+
+
+
+//type d'activité - performance
+//radar chart
+export const GetUserActivityPerformance = ({ setData, userId }) => {
+  useEffect(() => {
+    const getData = async () => {
+      const response = await fetch(
+        `http://localhost:3003/user/${userId}/performance`
+      );
+      const json = await response.json();
+      let userPerformanceData = Object.values(json)[0];
+      
+      //   console.log("GET newSessionUserData", newSessionUserData);
+      setData(userPerformanceData);
+    };
+    getData();
+  }, [setData, userId]);
+
+  return null;
+};

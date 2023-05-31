@@ -12,6 +12,7 @@ import {
   RechartsCustomBars,
   RechartsCustomLineChart,
   RechartsCustomRadial,
+  RechartsCustomRadar,
 } from "../../components";
 import { EnergyIcon, ChickenIcon, AppleIcon, BurgerIcon } from "../../assets";
 import useFetch from "../../hooks/useFetchAsync";
@@ -74,7 +75,7 @@ function Dashboard() {
                 <RechartsCustomLineChart />
               </Block>
               <Block color={colors.graphitBg} margin="10px " padding="20px">
-                <></>
+                <RechartsCustomRadar />
               </Block>
               <Block
                 color={colors.bgClear}
