@@ -48,7 +48,7 @@ function RechartsCustomLineChart() {
   let { userId } = useParams();
 
   const [data, setData] = useState(null);
-  console.log("LINECHART data", data);
+  //console.log("LINECHART data", data);
 
   const dataExist = (data || data?.id) != null;
 

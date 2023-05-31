@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { GetUserActivityPerformance } from "../../services/GetData";
-import { Loader, Text } from "../../components";
+import { Loader } from "../../components";
 import { useParams } from "react-router-dom";
 
 import styled from "styled-components";
@@ -21,73 +21,41 @@ const RechartsCustomRadarStyled = styled.div`
   width: 100%;
   height: 160px;
   position: relative;
+  .radiusAxis,
+  .recharts-polar-radius-axis-ticks {
+    display: none;
+  }
 `;
-
-const fakeData = [
-  {
-    subject: "Math",
-    A: 120,
-    B: 110,
-    fullMark: 150,
-  },
-  {
-    subject: "Chinese",
-    A: 98,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: "English",
-    A: 86,
-    B: 130,
-    fullMark: 150,
-  },
-  {
-    subject: "Geography",
-    A: 99,
-    B: 100,
-    fullMark: 150,
-  },
-  {
-    subject: "Physics",
-    A: 85,
-    B: 90,
-    fullMark: 150,
-  },
-  {
-    subject: "History",
-    A: 65,
-    B: 85,
-    fullMark: 150,
-  },
-];
 
 function RechartsCustomRadar() {
   let { userId } = useParams();
   const [data, setData] = useState(null);
 
-  //const dataExist = (data || data?.id) != null;
-  const dataExist = true
-
-  //END TODO modelisation de data ici ??
-
+  const dataExist = (data || data?.id) != null;
   return (
     <>
       <GetUserActivityPerformance setData={setData} userId={Number(userId)} />
-      {console.log("data", data)}
-
       <RechartsCustomRadarStyled>
         {dataExist ? (
           <ResponsiveContainer width="100%" height="100%">
-            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={fakeData}>
-              <PolarGrid />
-              <PolarAngleAxis dataKey="subject" />
+            <RadarChart
+              cx="50%"
+              cy="50%"
+              data={data}
+              //bigger or smaller radar:
+              outerRadius="70%"
+              margin={{ left: 40 }}
+            >
+              <PolarGrid radialLines={false} />
+              <PolarAngleAxis
+                dataKey="subject"
+                tick={{ fill: colors.bgWhite, fontSize: 12, dy: 4 }}
+              />
               <PolarRadiusAxis />
               <Radar
-                name="Mike"
-                dataKey="A"
-                stroke="#8884d8"
-                fill="#8884d8"
+                name={data?.userId}
+                dataKey="value"
+                fill={colors.main}
                 fillOpacity={0.6}
               />
             </RadarChart>

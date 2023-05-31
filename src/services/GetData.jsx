@@ -114,16 +114,13 @@ export const GetUserAverageSessions = ({ setData, userId }) => {
           }
           return weekName;
         }
-
-        weekNameGenerator(5);
-
         const averageSessionsModel = averageSessions?.sessions?.map((item) => ({
           ...item,
           dayName: weekNameGenerator(item.day),
         }));
 
         //console.log("averageSessionsModel", averageSessionsModel);
-        return averageSessionsModel
+        return averageSessionsModel;
       }
       const averageSessionsDataModel = averageSessionsGenerator();
       setData(averageSessionsDataModel);
@@ -133,8 +130,6 @@ export const GetUserAverageSessions = ({ setData, userId }) => {
 
   return null;
 };
-
-
 
 //type d'activité - performance
 //radar chart
@@ -146,9 +141,22 @@ export const GetUserActivityPerformance = ({ setData, userId }) => {
       );
       const json = await response.json();
       let userPerformanceData = Object.values(json)[0];
-      
-      //   console.log("GET newSessionUserData", newSessionUserData);
-      setData(userPerformanceData);
+      //selecting the matching kind from data.kind
+      const findPerfKind = (obj, val) => {
+        const result = Object.entries(obj).filter((item) => {
+          const selectedKind = val === +item[0];
+          return selectedKind;
+        });
+        return result[0][1];
+      };
+
+      const performanceModel = userPerformanceData?.data?.map((item) => ({
+        ...item,
+        subject: findPerfKind(userPerformanceData?.kind, item?.kind),
+        fullMark: 150,
+      }));
+
+      setData(performanceModel);
     };
     getData();
   }, [setData, userId]);

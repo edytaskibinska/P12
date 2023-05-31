@@ -3,9 +3,7 @@ import { useParams } from "react-router-dom";
 
 import {
   Block,
-  IconBlock,
   Indicator,
-  IndicatorText,
   Loader,
   Text,
   Title,
@@ -15,30 +13,17 @@ import {
   RechartsCustomRadar,
 } from "../../components";
 import { EnergyIcon, ChickenIcon, AppleIcon, BurgerIcon } from "../../assets";
-import useFetch from "../../hooks/useFetchAsync";
-import { urlSettings, ressources } from "../../routes/settings";
 import colors from "../../globalStyles/colorsIndex";
-import { GetUserActivity, GetUserById } from "../../services/GetData";
-//import UseFetchTempClass from "../../services/tempmock";
+import { GetUserById } from "../../services/GetData";
 
 function Dashboard() {
   //TODO : gerer les userId, ressource dynamiquement
-  const { server, port, uriUser } = urlSettings;
+  //const { server, port, uriUser } = urlSettings;
   let { userId } = useParams();
 
-  const urlBase = `${server}:${port}/${uriUser}/${userId}`;
+  //const urlBase = `${server}:${port}/${uriUser}/${userId}`;
   //userId :       /:user_id
   //On utilise  :user_id  pour matérialiser l’ID de l’utilisateur, c’est ce qu’on appelle un placeholder.
-
-  const { session, activity, performance } = ressources;
-
-  const sessionsData = useFetch(`${urlBase}/${session}`);
-  const activityData = useFetch(`${urlBase}/${activity}`);
-  const performanceData = useFetch(`${urlBase}/${performance}`);
-
-  //const { data } = sessionsData;
-  //const { data } = activityData;
-  //const { data } = performanceData;
 
   const [data, setData] = useState(null);
 
@@ -139,7 +124,7 @@ function Dashboard() {
       <Block color={colors.graphitBg}>
         <></>
       </Block>
-      {!sessionsData.isLoaded && <Loader />}
+      {!dataExist && <Loader />}
     </article>
   );
 }
