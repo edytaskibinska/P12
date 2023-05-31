@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useState } from "react";
 import { GetUserActivity } from "../../services/GetData";
 import { useParams } from "react-router-dom";
@@ -31,7 +30,7 @@ function RechartsCustomBars() {
   return (
     <>
       <GetUserActivity setData={setData} userId={Number(userId)} />
-      {console.log("GetUserActivity /activity", data)}
+      {/* {console.log("GetUserActivity /activity", data)} */}
       {(data || data?.id) != null && (
         <RechartsCustomBarsStyled>
           <BarChart

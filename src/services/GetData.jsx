@@ -26,7 +26,7 @@ export const GetUserById = ({ setData, userId }) => {
         lipidUnity: "g",
       };
       getUsers = { ...getUsers, ...addedTitles, unities };
-      console.log("getUsers", getUsers);
+      // console.log("getUsers", getUsers);
       // console.log("GET GetUserById getUsers", getUsers);
 
       setData(getUsers); // a corriger

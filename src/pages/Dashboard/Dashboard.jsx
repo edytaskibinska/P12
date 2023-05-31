@@ -87,7 +87,7 @@ function Dashboard() {
         </Block>
 
         <Block padding="20px 10px" specialClass="indicators">
-          {console.log("INDICATORS data", data)}
+          {/* {console.log("INDICATORS data", data)} */}
           {dataExist ? (
             <>
               <Indicator

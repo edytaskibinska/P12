@@ -25,7 +25,7 @@ Indicator.propTypes = {
   count: PropTypes.number,
   unity: PropTypes.string,
   colorBgClear: PropTypes.string,
-  colorIconBox: PropTypes.number,
+  colorIconBox: PropTypes.string,
 };
 
 export default Indicator;

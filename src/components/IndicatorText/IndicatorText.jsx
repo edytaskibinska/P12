@@ -52,7 +52,7 @@ IndicatorText.propTypes = {
   descriptionColor: PropTypes.string,
   padding: PropTypes.string,
   margin: PropTypes.string,
-  indicatorvalue: PropTypes.number, //ou number ?? TODO verifier
+  indicatorvalue: PropTypes.string, //ou number ?? TODO verifier
   description: PropTypes.string,
 };
 
