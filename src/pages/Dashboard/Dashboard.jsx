@@ -10,7 +10,8 @@ import {
   Text,
   Title,
   RechartsCustomBars,
-  RechartsCustomRadial
+  RechartsCustomLineChart,
+  RechartsCustomRadial,
 } from "../../components";
 import { EnergyIcon, ChickenIcon, AppleIcon, BurgerIcon } from "../../assets";
 import useFetch from "../../hooks/useFetchAsync";
@@ -70,7 +71,7 @@ function Dashboard() {
                 margin="10px 10px 10px 0"
                 padding="20px"
               >
-                <></>
+                <RechartsCustomLineChart />
               </Block>
               <Block color={colors.graphitBg} margin="10px " padding="20px">
                 <></>
@@ -85,7 +86,6 @@ function Dashboard() {
             </Block>
           </Block>
         </Block>
-
         <Block padding="20px 10px" specialClass="indicators">
           {/* {console.log("INDICATORS data", data)} */}
           {dataExist ? (
@@ -132,7 +132,6 @@ function Dashboard() {
           )}
         </Block>
       </Block>
-
       <Block color={colors.main}>
         <></>
       </Block>

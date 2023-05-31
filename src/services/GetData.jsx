@@ -27,7 +27,6 @@ export const GetUserById = ({ setData, userId }) => {
       };
       getUsers = { ...getUsers, ...addedTitles, unities };
       // console.log("getUsers", getUsers);
-      // console.log("GET GetUserById getUsers", getUsers);
 
       setData(getUsers); // a corriger
     };
@@ -56,10 +55,78 @@ export const GetUserActivity = ({ setData, userId }) => {
         userId: sessionsUserData.userId,
         sessions: sessionsModel,
       };
-      //   console.log("GET sessionsUserData", sessionsUserData);
       //   console.log("GET newSessionUserData", newSessionUserData);
-      //   console.log("GET sessionsModel", sessionsModel);
       setData(newSessionUserData);
+    };
+    getData();
+  }, [setData, userId]);
+
+  return null;
+};
+
+//durée moyenne des sessions
+export const GetUserAverageSessions = ({ setData, userId }) => {
+  useEffect(() => {
+    const getData = async () => {
+      const response = await fetch(
+        `http://localhost:3003/user/${userId}/average-sessions`
+      );
+      const json = await response.json();
+      let averageSessions = Object.values(json)[0];
+
+      function averageSessionsGenerator() {
+        function weekNameGenerator(ind) {
+          let weekName = "L";
+
+          switch (ind) {
+            case 1: {
+              weekName = "L";
+              break;
+            }
+            case 2: {
+              weekName = "M";
+              break;
+            }
+            case 3: {
+              weekName = "M";
+              break;
+            }
+            case 4: {
+              weekName = "J";
+              break;
+            }
+            case 5: {
+              weekName = "V";
+              break;
+            }
+            case 6: {
+              weekName = "S";
+              break;
+            }
+            case 7: {
+              weekName = "D";
+              break;
+            }
+            default: {
+              weekName = "L";
+              break;
+            }
+          }
+          return weekName;
+        }
+
+        weekNameGenerator(5);
+
+        const averageSessionsModel = averageSessions?.sessions?.map((item) => ({
+          ...item,
+          dayName: weekNameGenerator(item.day),
+        }));
+
+        //console.log("averageSessionsModel", averageSessionsModel);
+        return averageSessionsModel
+      }
+      const averageSessionsDataModel = averageSessionsGenerator();
+      setData(averageSessionsDataModel);
     };
     getData();
   }, [setData, userId]);

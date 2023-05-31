@@ -4,6 +4,8 @@ import Indicator from "./Indicator/Indicator";
 import IndicatorText from "./IndicatorText/IndicatorText";
 import Loader from "./Loader/Loader";
 import RechartsCustomBars from "./RechartsCustomBars/RechartsCustomBars";
+import RechartsCustomLineChart from "./RechartsCustomLineChart/RechartsCustomLineChart";
+
 import RechartsCustomRadial from "./RechartsCustomRadial/RechartsCustomRadial";
 import Text from "./Text/Text";
 import Title from "./Title/Title";
@@ -15,6 +17,7 @@ export {
   IndicatorText,
   Loader,
   RechartsCustomBars,
+  RechartsCustomLineChart,
   RechartsCustomRadial,
   Text,
   Title,

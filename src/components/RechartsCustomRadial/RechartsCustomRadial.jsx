@@ -45,6 +45,12 @@ const RechartsCustomRadialStyled = styled.div`
   }
   .radialSoreTitle {
     position: absolute;
+    top:-3%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: ${colors.blackBg};
   }
 `;
 
