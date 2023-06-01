@@ -8,10 +8,6 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
 
 ## Front-end Tech stack :
 
-- "devDependencies": {
-  "parcel": "^2.8.3"
-- },
-
 - "dependencies": {
 - "react": "^18.2.0",
 - "react-dom": "^18.2.0",
@@ -36,7 +32,11 @@ SportSee c'est une startup dédiée au coaching sportif. En pleine croissance, l
 - Front-end command  :  npm run start
 - Back-end command  : npm run start-backend
 
-NOTE: I dopn't use Yarn anymore, it's a fun package manager but to avoid errors and have the application stable I use npm CLI. 
+Run first npm run start-backend  - you will see the server runnning on port 3003
+Then you run npm start : the react app will run on port 3000
+You will have a choice between Karl and Cecilia to access to the dashboard and see the data changing on differents routes 
+The menu entry "Accueil" points to the routs /12 (Karl)  - it is on opurpose  
+NOTE: I use the npm CLI and no Yarn anymore because of some conflicts between yarn and npm. 
 
 # Initial README content (back-end informations)
 
