@@ -1,10 +1,4 @@
 import { useEffect } from "react";
-//QUESTION
-//Est-ce qu'on fait la modelisation des data ici ?  ex: ajouter key value pair a l'objet de base
-//ou dans le fichier de composant ?
-// revoir les algos si bien faits - performance
-//END QUESTION
-
 
 //for objectif de la journée
 //and : informations utilisateur
@@ -14,7 +8,6 @@ export const GetUserById = ({ setData, userId }) => {
       const response = await fetch(`http://localhost:3003/user/${userId}`);
       const json = await response.json();
       let getUsers = Object.values(json)[0];
-
       //adding supplement object to generate titles
       const addedTitles = {
         keyDataTitles: {
@@ -32,9 +25,7 @@ export const GetUserById = ({ setData, userId }) => {
         lipidUnity: "g",
       };
       getUsers = { ...getUsers, ...addedTitles, unities };
-      // console.log("getUsers", getUsers);
-
-      setData(getUsers); // a corriger
+      setData(getUsers);
     };
     getData();
   }, [setData, userId]);
@@ -61,7 +52,6 @@ export const GetUserActivity = ({ setData, userId }) => {
         userId: sessionsUserData.userId,
         sessions: sessionsModel,
       };
-      //   console.log("GET newSessionUserData", newSessionUserData);
       setData(newSessionUserData);
     };
     getData();
@@ -124,8 +114,6 @@ export const GetUserAverageSessions = ({ setData, userId }) => {
           ...item,
           dayName: weekNameGenerator(item.day),
         }));
-
-        //console.log("averageSessionsModel", averageSessionsModel);
         return averageSessionsModel;
       }
       const averageSessionsDataModel = averageSessionsGenerator();
@@ -155,13 +143,11 @@ export const GetUserActivityPerformance = ({ setData, userId }) => {
         });
         return result[0][1];
       };
-
       const performanceModel = userPerformanceData?.data?.map((item) => ({
         ...item,
         subject: findPerfKind(userPerformanceData?.kind, item?.kind),
         fullMark: 150,
       }));
-
       setData(performanceModel);
     };
     getData();

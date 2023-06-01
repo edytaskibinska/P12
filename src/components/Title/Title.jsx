@@ -20,20 +20,11 @@ const TitleHello = styled.span.attrs((props) => ({
 }))`
   color: ${(props) => props.welcomeColor};
 `;
-
 const TitleName = styled.span.attrs((props) => ({
   namecolor: props.namecolor,
 }))`
   color: ${colors?.main};
 `;
-
-// const TitleName = styled.span.attrs((props) => ({
-//   namecolor: props.namecolor,
-// }))`
-//   color: ${(props) => props.namecolor};
-// `; TODO : trouver une solution avec props 
-
-
 function Title({ welcomeMessage, name, welcomeColor, namecolor, margin }) {
   return (
     <TitleStyled className="title" margin={margin}>
@@ -45,7 +36,7 @@ function Title({ welcomeMessage, name, welcomeColor, namecolor, margin }) {
 
 Title.propTypes = {
   welcomeMessage: PropTypes.string.isRequired,
-  name: PropTypes.any,//TODO corriger
+  name: PropTypes.string,
   welcomeColor: PropTypes.string,
   namecolor: PropTypes.string,
   margin: PropTypes.string,

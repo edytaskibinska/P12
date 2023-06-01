@@ -3,10 +3,8 @@ import { useState } from "react";
 import { GetUserById } from "../../services/GetData";
 import { Loader, Text } from "../../components";
 import { useParams } from "react-router-dom";
-
 import styled from "styled-components";
 import colors from "../../globalStyles/colorsIndex";
-
 import {
   RadialBarChart,
   RadialBar,
@@ -15,7 +13,6 @@ import {
 } from "recharts";
 
 const RechartsCustomRadialStyled = styled.div`
-  // border: 1px solid red;
   width: 100%;
   height: 160px;
   position: relative;
@@ -36,8 +33,8 @@ const RechartsCustomRadialStyled = styled.div`
     top: 52%;
     left: calc(50% - 30px);
     width: 60px;
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 16px;
     color: ${colors.graphitBg};
     z-index: 8;
     text-align: center;
@@ -58,14 +55,13 @@ function RechartsCustomRadial() {
   const [data, setData] = useState(null);
 
   const dataExist = (data || data?.id) != null;
-  //QUESTION
-  //TODO modelisation de data ici ??
+
+  //calculations based on fetched data
   let scoreToPercentage = 0;
   data?.todayScore
     ? (scoreToPercentage += data?.todayScore * 100)
     : (scoreToPercentage += data?.score * 100);
   let endAngleCalc = 360 / (100 / scoreToPercentage) + 90;
-  //TODO ajustement des data au exhart ici :
   const scoreValue = [
     {
       name: "Score",
@@ -74,13 +70,10 @@ function RechartsCustomRadial() {
       fill: colors.main,
     },
   ];
-  //END TODO modelisation de data ici ??
 
   return (
     <>
       <GetUserById setData={setData} userId={Number(userId)} />
-      {/* {console.log("data", data)} */}
-
       <RechartsCustomRadialStyled>
         {dataExist ? (
           <>

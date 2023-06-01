@@ -7,7 +7,7 @@ import styleSettings from "../../globalStyles/styleSettings";
 const AsideStyled = styled.aside`
   background-color: black;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   position: relative;

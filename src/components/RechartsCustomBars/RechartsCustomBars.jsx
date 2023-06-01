@@ -42,7 +42,7 @@ function RechartsCustomBars() {
   return (
     <>
       <GetUserActivity setData={setData} userId={Number(userId)} />
-      {/* {console.log("GetUserActivity /activity", data)} */}
+
       {(data || data?.id) != null && (
         <RechartsCustomBarsStyled>
           <ResponsiveContainer width="100%">
@@ -68,21 +68,8 @@ function RechartsCustomBars() {
                 Activité quotidienne
               </text>
               <XAxis dataKey="name" tickLine={false} axisLine={false} dy={15} />
-              <YAxis
-                orientation="right"
-                axisLine={false}
-                tickLine={false}
-                //TODO
-                //dataKey="kilogram"
-                //domain={[68, 81]}
-              />
-              <YAxis
-                orientation="right"
-                axisLine={false}
-                tickLine={false}
-                //dataKey="calories"
-                //domain={[68, 81]}
-              />
+              <YAxis orientation="right" axisLine={false} tickLine={false} />
+              <YAxis orientation="right" axisLine={false} tickLine={false} />
               <Tooltip
                 content={RechartCustomTooltip}
                 wrapperStyle={{ outline: "none" }}

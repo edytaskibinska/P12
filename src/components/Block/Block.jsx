@@ -19,11 +19,11 @@ const BlockStyled = styled.div.attrs((props) => ({
     align-items: stretch;
     & > * {
       &:first-child {
-        flex: 70%;
+        flex: 75%;
         margin-left: 0;
       }
       &:nth-child(2) {
-        flex: 30%;
+        flex: 25%;
         margin-right: 0;
       }
     }

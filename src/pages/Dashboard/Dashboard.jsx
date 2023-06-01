@@ -17,31 +17,19 @@ import colors from "../../globalStyles/colorsIndex";
 import { GetUserById } from "../../services/GetData";
 
 function Dashboard() {
-  //TODO : SUPPRIMER DEAD CODE 
-  //const { server, port, uriUser } = urlSettings;
   let { userId } = useParams();
-
-  //const urlBase = `${server}:${port}/${uriUser}/${userId}`;
-  //userId :       /:user_id
-  //On utilise  :user_id  pour matérialiser l’ID de l’utilisateur, c’est ce qu’on appelle un placeholder.
-
   const [data, setData] = useState(null);
-
-  // console.log("DASHB data", data);
   const dataExist = (data || data?.id) != null;
 
   return (
     <article className="dashboard">
-      {/* GET data : getUserById */}
       <GetUserById setData={setData} userId={Number(userId)} />
-
       <Title
         welcomeMessage="Bonjour "
         margin="20px 0 0 0"
         name={dataExist && data?.userInfos?.firstName}
         nameColor="red"
       />
-
       <Text fontSize="18px" margin="20px 0 40px 0">
         Félicitation ! Vous avez explosé vos objectifs hier 👏
       </Text>
@@ -73,7 +61,6 @@ function Dashboard() {
           </Block>
         </Block>
         <Block padding="20px 10px" specialClass="indicators">
-          {/* {console.log("INDICATORS data", data)} */}
           {dataExist ? (
             <>
               <Indicator

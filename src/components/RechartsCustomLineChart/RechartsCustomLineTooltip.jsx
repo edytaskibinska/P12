@@ -1,8 +1,6 @@
 import React from "react";
-
 import styled from "styled-components";
 import colors from "../../globalStyles/colorsIndex";
-
 import { Text } from "../";
 
 const RechartsCustomLineTooltipStyled = styled.div`
@@ -15,8 +13,7 @@ const RechartsCustomLineTooltipStyled = styled.div`
 
 function RechartsCustomLineTooltip({ active, payload }) {
   if (active && payload && payload.length) {
-    console.log("payload", payload);
-    console.log("payload[0].payload.id", payload[0].payload.id);
+    // console.log("payload[0].payload.id", payload[0].payload.id);
     return (
       <RechartsCustomLineTooltipStyled className="RechartsCustomLineTooltip">
         <Text fontSize="8px" color={colors.graphitBg} className="tooltipLabel">

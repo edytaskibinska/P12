@@ -46,7 +46,7 @@ const RechartsCustomLineChartStyled = styled.div`
   .recharts-cartesian-axis-ticks {
     font-style: normal;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 18px;
     color: ${colors.bgWhite};
     mix-blend-mode: normal;
@@ -65,7 +65,6 @@ function RechartsCustomLineChart() {
   return (
     <>
       <GetUserAverageSessions setData={setData} userId={Number(userId)} />
-      {/* {console.log("GetUserAverageSessions ", data)} */}
       {dataExist ? (
         <>
           <RechartsCustomLineChartStyled>
@@ -79,31 +78,29 @@ function RechartsCustomLineChart() {
                 //change the height of line
                 margin={{ top: 70, bottom: 30 }}
               >
-                {/* <CartesianGrid strokeDasharray="3 3" /> */}
                 <XAxis
                   dataKey="dayName"
                   axisLine={false}
                   tickLine={false}
                   //padding defini la longueur de graphe
-                  padding={{ left: 9, right: 5 }}
+                  padding={{ left: 9, right: 10 }}
                   stroke="white"
                   dy={19}
                 />
                 <Tooltip
                   cursor={false}
                   content={RechartsCustomLineTooltip}
-                 allowEscapeViewBox={{x: true , y: false }}
+                  allowEscapeViewBox={{ x: true, y: false }}
                   wrapperStyle={{
                     backgroundColor: "rgb(0 0 0 / 0.1)",
                     height: 242,
                     width: 140,
                     top: -90,
-                    minWidth: 200,
-                    visibility: "visible"
+                    minWidth: 360,
+                    visibility: "visible",
                   }}
                   //position={{ y: 0 }}
                 />
-
                 <Legend />
                 <Line
                   type="monotone"

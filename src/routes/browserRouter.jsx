@@ -1,6 +1,6 @@
 import { Layout } from "../layout";
 
-import { Dashboard, Page404 } from "../pages";
+import { Accueil, Dashboard, Page404 } from "../pages";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -16,6 +16,7 @@ const Root = () => {
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
+      <Route index path="/" element={<Accueil />} />
       <Route index path="/:userId" element={<Dashboard />} />
       <Route path="accueil" element={<Page404 />} />
       <Route path="profil" element={<Page404 />} />

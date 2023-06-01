@@ -8,7 +8,7 @@ const MenuStyled = styled.ul`
   .navLink {
     color: white;
     padding: 20px;
-    font-size: 24px;
+    font-size: 22px;
     text-decoration: none;
     font-family: ${styleSettings.fontFamily.regular}, sans-serif;
     &.active {

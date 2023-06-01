@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import PropTypes from "prop-types";
 
 const LoaderElementStyled = styled.div`
   box-sizing: border-box;
@@ -16,11 +15,9 @@ const LoaderElementStyled = styled.div`
     width: 40px;
     height: 40px;
   }
-
   &:nth-child(1) {
     animation-delay: -0.45s;
   }
-
   &:nth-child(2) {
     animation-delay: -0.3s;
   }
@@ -54,8 +51,5 @@ function Loader() {
     </LoaderStyled>
   );
 }
-Loader.propTypes = {
-  //TODO - delete if not used
-};
 
 export default Loader;

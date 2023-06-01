@@ -3,10 +3,8 @@ import { useState } from "react";
 import { GetUserActivityPerformance } from "../../services/GetData";
 import { Loader } from "../../components";
 import { useParams } from "react-router-dom";
-
 import styled from "styled-components";
 import colors from "../../globalStyles/colorsIndex";
-
 import {
   Radar,
   RadarChart,
@@ -17,7 +15,6 @@ import {
 } from "recharts";
 
 const RechartsCustomRadarStyled = styled.div`
-  //border: 1px solid red;
   width: 100%;
   height: 100%;
   position: relative;
@@ -43,13 +40,13 @@ function RechartsCustomRadar() {
               cy="50%"
               data={data}
               //bigger or smaller radar:
-              outerRadius="70%"
+              outerRadius="60%"
               margin={{ left: 40 }}
             >
               <PolarGrid radialLines={false} />
               <PolarAngleAxis
                 dataKey="subject"
-                tick={{ fill: colors.bgWhite, fontSize: 12, dy: 4 }}
+                tick={{ fill: colors.bgWhite, fontSize: 10, dy: 4 }}
               />
               <PolarRadiusAxis />
               <Radar

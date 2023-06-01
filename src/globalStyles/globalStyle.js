@@ -1,9 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-//TODO  import colors from '../settings/colorsIndex'
 import styleSettings from "../globalStyles/styleSettings";
 
 const GlobalStyle = createGlobalStyle`
-  
   @font-face {
     font-family: ${styleSettings.fontFamily.regular};
     src:  url(${styleSettings.fontFamily.urlRegularVar});
@@ -19,24 +17,18 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-  
   body {
     font-family: ${styleSettings.fontFamily.regular}, sans-serif;
-    // -webkit-font-smoothing: (subpixel-antialiased);
-    // font-smoothing: (subpixel-antialiased);
   }
   .layout {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-bottom: -20px; //TODO quick fix - chercher d'autres alternatives
- 
+    margin-bottom: -20px;
   }
-  
   .layout .container {
     flex-grow: 1;
   }
-
 `;
 
 export default GlobalStyle;
