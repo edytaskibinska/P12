@@ -5,11 +5,13 @@ const BlockStyled = styled.div.attrs((props) => ({
   color: props.color,
   padding: props.padding,
   margin: props.margin,
+  overflow: props.overflow,
 }))`
   border-radius: 5px;
   background-color: ${(props) => props.color};
   padding: ${(props) => props.padding};
   margin: ${(props) => props.margin};
+  overflow: ${(props) => props.overflow};
 
   &.grid3to1 {
     display: flex;
@@ -57,6 +59,7 @@ function Block({
   color,
   padding,
   margin,
+  overflow,
   grid3to1,
   grid1to3,
   grid3to3,
@@ -70,6 +73,7 @@ function Block({
       color={color}
       padding={padding}
       margin={margin}
+      overflow={overflow}
     >
       {children}
     </BlockStyled>
@@ -81,6 +85,7 @@ Block.propTypes = {
   color: PropTypes.string,
   padding: PropTypes.string,
   margin: PropTypes.string,
+  overflow: PropTypes.string,
   grid3to1: PropTypes.bool,
   grid1to3: PropTypes.bool,
   grid3to3: PropTypes.bool,

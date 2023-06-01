@@ -1,8 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { GetUserAverageSessions } from "../../services/GetData";
 import { useParams } from "react-router-dom";
-import { Loader, Text } from "../../components";
+import { Loader, Text, RechartsCustomLineTooltip } from "../../components";
 
 import styled from "styled-components";
 import colors from "../../globalStyles/colorsIndex";
@@ -11,23 +11,24 @@ import {
   LineChart,
   Line,
   XAxis,
-  YAxis,
-  CartesianGrid,
+  //YAxis,
+  //CartesianGrid,
   Tooltip,
   Legend,
   ResponsiveContainer,
 } from "recharts";
 
 const RechartsCustomLineChartStyled = styled.div`
-  border: 1px solid blue;
+  //border: 1px solid blue;
   position: relative;
   min-height: 150px;
   .lineChartTitle {
     position: absolute;
+    max-width: 133px;
     height: 48px;
-    left: 0%;
+    left: 16px;
     right: 0.68%;
-    top: -3%;
+    top: 16px;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
@@ -40,7 +41,16 @@ const RechartsCustomLineChartStyled = styled.div`
     display: none;
   }
   .recharts-responsive-container {
-    height: 200px!important;
+    height: 200px !important;
+  }
+  .recharts-cartesian-axis-ticks {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: ${colors.bgWhite};
+    mix-blend-mode: normal;
+    opacity: 0.5;
   }
 `;
 
@@ -81,8 +91,16 @@ function RechartsCustomLineChart() {
                 />
                 <Tooltip
                   cursor={false}
-                  content={<Text>Tooltip</Text>}
-                  wrapperStyle={{ border: "1px solid black" }}
+                  content={RechartsCustomLineTooltip}
+                 allowEscapeViewBox={{x: true , y: false }}
+                  wrapperStyle={{
+                    backgroundColor: "rgb(0 0 0 / 0.1)",
+                    height: 242,
+                    width: 140,
+                    top: -90,
+                    minWidth: 200,
+                    visibility: "visible"
+                  }}
                   //position={{ y: 0 }}
                 />
 

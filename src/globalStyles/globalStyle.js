@@ -30,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     margin-bottom: -20px; //TODO quick fix - chercher d'autres alternatives
+ 
   }
   
   .layout .container {

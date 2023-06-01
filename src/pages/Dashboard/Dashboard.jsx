@@ -17,7 +17,7 @@ import colors from "../../globalStyles/colorsIndex";
 import { GetUserById } from "../../services/GetData";
 
 function Dashboard() {
-  //TODO : gerer les userId, ressource dynamiquement
+  //TODO : SUPPRIMER DEAD CODE 
   //const { server, port, uriUser } = urlSettings;
   let { userId } = useParams();
 
@@ -53,13 +53,13 @@ function Dashboard() {
           <Block>
             <Block grid3to3>
               <Block
+                overflow="hidden"
                 color={colors.main}
                 margin="10px 10px 10px 0"
-                padding="20px"
               >
                 <RechartsCustomLineChart />
               </Block>
-              <Block color={colors.graphitBg} margin="10px " padding="20px">
+              <Block color={colors.graphitBg} margin="10px " padding="5px">
                 <RechartsCustomRadar />
               </Block>
               <Block

@@ -1,4 +1,10 @@
 import { useEffect } from "react";
+//QUESTION
+//Est-ce qu'on fait la modelisation des data ici ?  ex: ajouter key value pair a l'objet de base
+//ou dans le fichier de composant ?
+// revoir les algos si bien faits - performance
+//END QUESTION
+
 
 //for objectif de la journée
 //and : informations utilisateur

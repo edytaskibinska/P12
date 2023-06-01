@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 
 import styled from "styled-components";
 import colors from "../../globalStyles/colorsIndex";
-//import colorVariables from "../../globalStyles/vars/colorVariables";
 
 import {
   RadialBarChart,
@@ -16,7 +15,7 @@ import {
 } from "recharts";
 
 const RechartsCustomRadialStyled = styled.div`
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 100%;
   height: 160px;
   position: relative;
@@ -45,7 +44,7 @@ const RechartsCustomRadialStyled = styled.div`
   }
   .radialSoreTitle {
     position: absolute;
-    top:-3%;
+    top: -3%;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
@@ -59,7 +58,7 @@ function RechartsCustomRadial() {
   const [data, setData] = useState(null);
 
   const dataExist = (data || data?.id) != null;
-
+  //QUESTION
   //TODO modelisation de data ici ??
   let scoreToPercentage = 0;
   data?.todayScore

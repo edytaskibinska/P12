@@ -17,9 +17,9 @@ import {
 } from "recharts";
 
 const RechartsCustomRadarStyled = styled.div`
-  border: 1px solid red;
+  //border: 1px solid red;
   width: 100%;
-  height: 160px;
+  height: 100%;
   position: relative;
   .radiusAxis,
   .recharts-polar-radius-axis-ticks {
