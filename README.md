@@ -38,6 +38,11 @@ You will have a choice between Karl and Cecilia to access to the dashboard and s
 The menu entry "Accueil" points to the routs /12 (Karl)  - it is on opurpose  
 NOTE: I use the npm CLI and no Yarn anymore because of some conflicts between yarn and npm. 
 
+# FIGMA :
+
+https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?type=design&node-id=0-1&t=cAlNtoASoGpn36LI-0
+
+
 # Initial README content (back-end informations)
 
 This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
